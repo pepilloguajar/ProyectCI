@@ -43,15 +43,13 @@
 
 	  increment_build_number
 	  build_number = get_build_number
+	  increment_version_number(bump_type: "patch")
 	  version = get_version_number
 
 	  formerVersion = "#{version}-b#{formerNumber}"
 	  commitVersion = "#{version}-b#{build_number}"
 
 	  set_info_plist_value(path: "./Project\ Fastlane/Info.plist", key: "CFBundleVersion", value: build_number)
-
-
-	# Change groups, DEBUG_SCHEME, CRASHLYTICS_API_TOEKN, CRASHLYTICS_BUILD_SECRET
 	  
 	  commit_version_bump(
 	      message: "Version #{commitVersion}"
