@@ -14,6 +14,18 @@
 		03124B102222CAE200083781 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03124B0E2222CAE200083781 /* LaunchScreen.storyboard */; };
 		03124B1B2222CAE200083781 /* Project_FastlaneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03124B1A2222CAE200083781 /* Project_FastlaneTests.swift */; };
 		03124B262222CAE200083781 /* Project_FastlaneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03124B252222CAE200083781 /* Project_FastlaneUITests.swift */; };
+		03124B382223134900083781 /* Appfile in Resources */ = {isa = PBXBuildFile; fileRef = 03124B342223134900083781 /* Appfile */; };
+		03124B392223134900083781 /* Appfile in Resources */ = {isa = PBXBuildFile; fileRef = 03124B342223134900083781 /* Appfile */; };
+		03124B3A2223134900083781 /* Appfile in Resources */ = {isa = PBXBuildFile; fileRef = 03124B342223134900083781 /* Appfile */; };
+		03124B3B2223134900083781 /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = 03124B352223134900083781 /* Fastfile */; };
+		03124B3C2223134900083781 /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = 03124B352223134900083781 /* Fastfile */; };
+		03124B3D2223134900083781 /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = 03124B352223134900083781 /* Fastfile */; };
+		03124B3E2223134900083781 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 03124B362223134900083781 /* README.md */; };
+		03124B3F2223134900083781 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 03124B362223134900083781 /* README.md */; };
+		03124B402223134900083781 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 03124B362223134900083781 /* README.md */; };
+		03124B412223134900083781 /* report.xml in Resources */ = {isa = PBXBuildFile; fileRef = 03124B372223134900083781 /* report.xml */; };
+		03124B422223134900083781 /* report.xml in Resources */ = {isa = PBXBuildFile; fileRef = 03124B372223134900083781 /* report.xml */; };
+		03124B432223134900083781 /* report.xml in Resources */ = {isa = PBXBuildFile; fileRef = 03124B372223134900083781 /* report.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +59,10 @@
 		03124B212222CAE200083781 /* Project FastlaneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project FastlaneUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03124B252222CAE200083781 /* Project_FastlaneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_FastlaneUITests.swift; sourceTree = "<group>"; };
 		03124B272222CAE200083781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03124B342223134900083781 /* Appfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Appfile; sourceTree = "<group>"; };
+		03124B352223134900083781 /* Fastfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
+		03124B362223134900083781 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		03124B372223134900083781 /* report.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = report.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +93,7 @@
 		03124AF92222CAE000083781 = {
 			isa = PBXGroup;
 			children = (
+				03124B332223134900083781 /* fastlane */,
 				03124B042222CAE100083781 /* Project Fastlane */,
 				03124B192222CAE200083781 /* Project FastlaneTests */,
 				03124B242222CAE200083781 /* Project FastlaneUITests */,
@@ -123,6 +140,17 @@
 				03124B272222CAE200083781 /* Info.plist */,
 			);
 			path = "Project FastlaneUITests";
+			sourceTree = "<group>";
+		};
+		03124B332223134900083781 /* fastlane */ = {
+			isa = PBXGroup;
+			children = (
+				03124B342223134900083781 /* Appfile */,
+				03124B352223134900083781 /* Fastfile */,
+				03124B362223134900083781 /* README.md */,
+				03124B372223134900083781 /* report.xml */,
+			);
+			path = fastlane;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,7 +257,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03124B3E2223134900083781 /* README.md in Resources */,
+				03124B3B2223134900083781 /* Fastfile in Resources */,
+				03124B382223134900083781 /* Appfile in Resources */,
 				03124B102222CAE200083781 /* LaunchScreen.storyboard in Resources */,
+				03124B412223134900083781 /* report.xml in Resources */,
 				03124B0D2222CAE200083781 /* Assets.xcassets in Resources */,
 				03124B0B2222CAE100083781 /* Main.storyboard in Resources */,
 			);
@@ -239,6 +271,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03124B3F2223134900083781 /* README.md in Resources */,
+				03124B422223134900083781 /* report.xml in Resources */,
+				03124B3C2223134900083781 /* Fastfile in Resources */,
+				03124B392223134900083781 /* Appfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +282,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03124B402223134900083781 /* README.md in Resources */,
+				03124B432223134900083781 /* report.xml in Resources */,
+				03124B3D2223134900083781 /* Fastfile in Resources */,
+				03124B3A2223134900083781 /* Appfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +473,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9AV4AUA4L2;
 				INFOPLIST_FILE = "Project Fastlane/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -443,6 +484,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -451,6 +493,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9AV4AUA4L2;
 				INFOPLIST_FILE = "Project Fastlane/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -461,6 +504,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
