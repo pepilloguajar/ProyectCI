@@ -13,23 +13,32 @@
 	# Uncomment the line if you want fastlane to automatically update itself
 	# update_fastlane
 
-	default_platform(:ios)
+default_platform :ios
 
-	platform :ios do
-	  desc "Description of what the lane does"
-	  lane :example do
-	      puts("this is my first 🚀 lane")
-	   end
+# xcode_select ENV["XCODE_PATH"]
 
-	   desc "Pasamos los test"
-	   lane :tests do
-		scan(scheme: "Project Fastlane")
-	    end
+ENV["BUILD_NUMBER"] = get_build_number
 
-	    # Beta Settings
-	# Scheme: “DEBUG"
-	  lane :beta do
+platform :ios do
+   desc "Runs all the tests, incremente build and versions, send notifications from Slack Team"
+   lane :build_and_test do
+       begin
+           build_and_test_lane()
+           increment_build_and_commit()
+           on_success()
+       rescue => exception
+           on_error(exception)
+       end
+   end
+end
 
+def build_and_test_lane
+   # cocoapods
+   clear_derived_data
+	scan(scheme: "Project Fastlane")
+end
+
+def increment_build_and_commit
 	# Change INFO_PLIST_PATH
 
 	  checkNewVersionStart = get_info_plist_value(path: "./Project\ Fastlane/Info.plist", key: "CFBundleVersion")
@@ -43,6 +52,7 @@
 
 	  increment_build_number
 	  build_number = get_build_number
+	  ENV["BUILD_NUMBER"] = build_number
 	  increment_version_number(bump_type: "patch")
 	  version = get_version_number
 
@@ -59,6 +69,40 @@
 	      build_number: commitVersion
 	      )
 	  push_to_git_remote
-	  end
-		
-	end
+	 
+end
+
+def on_success
+	slack("Test pasados correctamente. Nueva versión generada y actualizada en el repositorio",
+           success: false,
+           slack_url: "https://hooks.slack.com/services/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",
+           attachment_properties: {
+               fields: [
+                   {
+               		title: "Build number",
+               		value: ENV["BUILD_NUMBER"],
+           			}
+               ]
+           }
+       )
+end
+
+def on_error(exception)
+       slack(
+           message: "Error occured!",
+           success: false,
+           slack_url: "https://hooks.slack.com/services/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",
+           attachment_properties: {
+               fields: [
+                   {
+               		title: "Build number",
+               		value: ENV["BUILD_NUMBER"],
+           			},
+                   {
+                       title: "Error message",
+                       value: exception
+                   }
+               ]
+           }
+       )
+end

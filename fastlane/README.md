@@ -31,6 +31,11 @@ Pasamos los test
 fastlane ios beta
 ```
 
+### ios slack_message
+```
+fastlane ios slack_message
+```
+Runs all the tests
 
 ----
 
