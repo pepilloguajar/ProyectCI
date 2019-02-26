@@ -15,7 +15,7 @@
 
 default_platform :ios
 
-# xcode_select ENV["XCODE_PATH"]
+xcode_select ENV["XCODE_PATH"]
 
 ENV["BUILD_NUMBER"] = get_build_number
 
